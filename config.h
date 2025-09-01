@@ -28,9 +28,9 @@ static int powerline_size_reduction_pixels = 0;
 
 /* Functionality that is enabled by default, see util.h for options */
 static uint64_t functionality = 0
-	|Alpha // enables transparency
+//	|Alpha // enables transparency
 	|CaseSensitive // makes dmenu case sensitive by default
-//	|Centered // dmenu appears in the center of the screen
+	|Centered // dmenu appears in the center of the screen
 //	|ColorEmoji // enables color emoji support (removes Xft workaround)
 //	|ContinuousOutput // makes dmenu print out selected items immediately rather than at the end
 	|FuzzyMatch // allows fuzzy-matching of items in dmenu
@@ -47,7 +47,7 @@ static uint64_t functionality = 0
 //	|RestrictReturn // disables Shift-Return and Ctrl-Return to restrict dmenu to only output one item
 //	|ShowNumbers // makes dmenu display the number of matched and total items in the top right corner
 	|Sort // allow dmenu to sort menu items after matching
-	|TopBar // dmenu appears at the top of the screen
+//	|TopBar // dmenu appears at the top of the screen
 	|Xresources // makes dmenu read X resources at startup
 ;
 
