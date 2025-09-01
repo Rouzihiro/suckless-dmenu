@@ -46,6 +46,8 @@ static int dmy = 0; /* put dmenu at this y offset (measured from the bottom if t
 static unsigned int dmw = 0; /* make dmenu this wide */
 static int inputw = 0, promptw;
 static int lrpad; /* sum of left and right padding */
+static int vp;    /* vertical padding for bar */
+static int sp;    /* side padding for bar */
 static size_t cursor;
 static struct item *items = NULL;
 static struct item *matches, *matchend;
@@ -875,7 +877,7 @@ setup(void)
 	swa.override_redirect = managed ? False : True;
 	swa.background_pixel = scheme[SchemeNorm][ColBg].pixel;
 	swa.event_mask = ExposureMask | KeyPressMask | VisibilityChangeMask;
-	win = XCreateWindow(dpy, root, x, y, mw, mh, 0,
+	win = XCreateWindow(dpy, root, x + sp, y + vp, mw - 2 * sp, mh, 0,
 	                    CopyFromParent, CopyFromParent, CopyFromParent,
 	                    CWOverrideRedirect | CWBackPixel | CWEventMask, &swa);
 	XSetClassHint(dpy, win, &ch);
@@ -999,6 +1001,9 @@ main(int argc, char *argv[])
 	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
 		die("no fonts could be loaded.");
 	lrpad = drw->fonts->h;
+
+	sp = sidepad;
+	vp = (topbar == 1) ? vertpad : - vertpad;
 
 #ifdef __OpenBSD__
 	if (pledge("stdio rpath", NULL) == -1)
