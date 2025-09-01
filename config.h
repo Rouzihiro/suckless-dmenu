@@ -59,17 +59,18 @@ static const unsigned int alphas[SchemeLast][2] = {
 };
 
 static char *colors[SchemeLast][ColCount] = {
-	/*                        fg         bg         resource prefix */
-	[SchemeNorm]          = { "#bbbbbb", "#222222", "norm" },
-	[SchemeSel]           = { "#eeeeee", "#005577", "sel" },
-	[SchemeOut]           = { "#000000", "#00ffff", "out" },
-	[SchemeBorder]        = { "#000000", "#005577", "border" },
-	[SchemePrompt]        = { "#eeeeee", "#005577", "prompt" },
-	[SchemeAdjacent]      = { "#eeeeee", "#770000", "adjacent" },
-	[SchemeSelHighlight]  = { "#ffc978", "#005577", "selhl" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222", "normhl" },
-	[SchemeHp]            = { "#bbbbbb", "#333333", "hp" },
+    /*               fg          bg          resource prefix */
+    [SchemeNorm]      = { "#c8c093", "#1f1f28", "norm" },       // normal text on background
+		[SchemeSel] 			= { "#1f1f28", "#f6c177", "sel" }, // dark text on warm yellow background
+    [SchemeOut]       = { "#000000", "#ff0000", "out" },        // external output (rarely used)
+    [SchemeBorder]    = { "#000000", "#2f2f3f", "border" },     // border of menu
+    [SchemePrompt]    = { "#c8c093", "#1f1f28", "prompt" },     // prompt text
+    [SchemeAdjacent]  = { "#dcd7ba", "#1f1f28", "adjacent" },   // adjacent items
+    [SchemeSelHighlight]  = { "#ff5d62", "#2f2f3f", "selhl" }, // highlight in selected
+    [SchemeNormHighlight] = { "#f6c177", "#1f1f28", "normhl" },// highlight in normal
+    [SchemeHp]        = { "#dcd7ba", "#1f1f28", "hp" },         // help / secondary
 };
+
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
 /* -g option; if nonzero, dmenu uses a grid comprised of columns and lines */
