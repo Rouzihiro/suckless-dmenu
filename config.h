@@ -29,7 +29,7 @@ static int powerline_size_reduction_pixels = 0;
 /* Functionality that is enabled by default, see util.h for options */
 static uint64_t functionality = 0
 //	|Alpha // enables transparency
-	|CaseSensitive // makes dmenu case sensitive by default
+//	|CaseSensitive // makes dmenu case sensitive by default
 	|Centered // dmenu appears in the center of the screen
 //	|ColorEmoji // enables color emoji support (removes Xft workaround)
 //	|ContinuousOutput // makes dmenu print out selected items immediately rather than at the end
