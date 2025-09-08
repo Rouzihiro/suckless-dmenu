@@ -1,7 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
+/* Theme include */
+#include "themes/everforest-hard.h"
+// #include "themes/everforest-soft.h"
+// #include "themes/kanagawa.h"
 /* -fn option overrides fonts[0]; default X11 font or font set */
+
 static char *fonts[] =
 {
 	"JetBrainsMono Nerd Font:size=12",
@@ -56,19 +61,6 @@ static uint64_t functionality = 0
 static const unsigned int alphas[SchemeLast][2] = {
 	/*               fg      bg   */
 	[SchemeNorm] = { OPAQUE, 0xd0 },
-};
-
-static char *colors[SchemeLast][ColCount] = {
-    /*               fg          bg          resource prefix */
-    [SchemeNorm]      = { "#c8c093", "#1f1f28", "norm" },       // normal text on background
-		[SchemeSel] 			= { "#1f1f28", "#f6c177", "sel" }, // dark text on warm yellow background
-    [SchemeOut]       = { "#000000", "#ff0000", "out" },        // external output (rarely used)
-    [SchemeBorder]    = { "#000000", "#2f2f3f", "border" },     // border of menu
-    [SchemePrompt]    = { "#c8c093", "#1f1f28", "prompt" },     // prompt text
-    [SchemeAdjacent]  = { "#dcd7ba", "#1f1f28", "adjacent" },   // adjacent items
-    [SchemeSelHighlight]  = { "#ff5d62", "#2f2f3f", "selhl" }, // highlight in selected
-    [SchemeNormHighlight] = { "#f6c177", "#1f1f28", "normhl" },// highlight in normal
-    [SchemeHp]        = { "#dcd7ba", "#1f1f28", "hp" },         // help / secondary
 };
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
