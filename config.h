@@ -2,7 +2,8 @@
 /* Default settings; can be overriden by command line. */
 
 /* Theme include */
-#include "themes/everforest-hard.h"
+#include "themes/nightfox.h"
+// #include "themes/everforest-hard.h"
 // #include "themes/everforest-soft.h"
 // #include "themes/kanagawa.h"
 /* -fn option overrides fonts[0]; default X11 font or font set */
@@ -68,7 +69,7 @@ static unsigned int lines      = 0;
 /* -g option; if nonzero, dmenu uses a grid comprised of columns and lines */
 static unsigned int columns    = 0;
 static unsigned int lineheight = 0; /* -h option; minimum height of a menu line */
-static unsigned int min_width  = 500; /* minimum width when centered */
+static unsigned int min_width  = 1000; /* minimum width when centered */
 static unsigned int maxhist    = 15;
 static int histnodup           = 1;	/* if 0, record repeated histories */
 
